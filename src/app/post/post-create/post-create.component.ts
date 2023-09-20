@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Post } from '../post.model';
 
 @Component({
   selector: 'app-post-create',
@@ -8,11 +9,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class PostCreateComponent {
   title: any;
   content: any;
-  post: { title: string, content: string }[] = [];
-  @Output() postCreated = new EventEmitter();
+  post: Post[] = [];
+  @Output() postCreated = new EventEmitter<Post>();
 
   onAddPost() {
-    const post = {
+    const post:Post = {
       title: this.title,
       content: this.content,
     };
