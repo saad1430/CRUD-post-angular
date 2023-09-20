@@ -1,0 +1,22 @@
+<main>
+    <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                Create Post
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="title" placeholder="Title">
+                </mat-form-field>
+                <mat-form-field>
+                    <textarea matInput rows="3" [(ngModel)]="content" placeholder="Content"></textarea>
+                </mat-form-field>
+                <a (click)="onAddPost()">
+                    <button mat-fab color="primary">
+                        <mat-icon>save</mat-icon>
+                    </button>
+                </a>
+            </ng-template>
+        </mat-expansion-panel>
+    </mat-accordion>
+</main>
